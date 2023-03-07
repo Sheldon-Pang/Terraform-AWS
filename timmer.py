@@ -16,7 +16,7 @@ timeout = 300  # 5 minutes
 terraform_commands = [
     "plan",
     "apply -auto-approve",
-    "destroy -force"
+    "destroy -auto-approve"
 ]
 
 # Change the current working directory to the Terraform directory
