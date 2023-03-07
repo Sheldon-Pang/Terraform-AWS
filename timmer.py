@@ -7,7 +7,7 @@ terraform_command = "terraform"
 
 # CHANGE THIS
 # Defines the directory where the Terraform configuration is located
-terraform_dir = "/Users/sheldonpang/Documents/Git Repo/Terraform-AWS/free-tier"
+terraform_dir = "/path/to/terraform/config"
 
 # Define the timeout in seconds
 timeout = 300  # 5 minutes
