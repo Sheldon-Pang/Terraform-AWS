@@ -19,7 +19,7 @@ Infrastructure managed in this project:
 
 1. [Install Terraform](https://learn.hashicorp.com/terraform/getting-started/install.html)
 2. Create AWS account
-3. If the file `~/.aws/credentials` does't exist, create it and add you Terraform profile to the file. For example: [More instruction](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html)
+3. If the file `~/.aws/credentials` doesn't exist, create it and add you Terraform profile to the file. For example: [More instruction](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html)
    ```text
    [default]
    aws_access_key_id = "Your access key"
@@ -32,7 +32,7 @@ Infrastructure managed in this project:
 5. Create config file `./free-tier/backend/config.tf` that will contain information how to store state in a given bucket. See [example](./free-tier/backend/example.config.tf). 
     ```text
     region  = "us-east-1"
-    bucket  = "your_backet_name"
+    bucket  = "your_bucket_name"
     key     = "terraform.tfstate"
     profile = "terraform"
     access_key = "Your access key"
@@ -48,12 +48,12 @@ Infrastructure managed in this project:
    
 ### Build infrastructure
 
-1. `cd ./src/free-tier`
+1. `cd ./free-tier`
 2. `terraform init -backend-config="./backend/config.tf"`
 3. `terraform plan`
 4. `terraform apply`
 
-### Post steps
+### Check EC2 connection
 
 After building the infrastructure you can try to connect to you `EC2 instance` via SSH:
 
@@ -66,7 +66,7 @@ To check HTTP access you can install `apache2` on your EC2 instance:
 2. `sudo service apache2 start` (on EC2 machine) 
 3. Check in browser: `http://[EC2 public IP]/`. You can see `Apache2 Default Page` (something like [this](https://annex.exploratorium.edu/))
 
-### Make sure to destroy when you done testing
+### Make sure to destroy when you are done testing
 To destroy infrastructure:
 
 1. `cd ./free-tier`
