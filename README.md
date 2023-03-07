@@ -52,6 +52,7 @@ Infrastructure managed in this project:
 2. `terraform init -backend-config="./backend/config.tf"`
 3. `terraform plan`
 4. `terraform apply`
+Alternatively, you can replace step 3 and 4 with timmer.py to automate the process of creating and destroying the resources.
 
 ### Check EC2 connection
 
