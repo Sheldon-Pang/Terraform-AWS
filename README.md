@@ -15,7 +15,7 @@ Infrastructure managed in this project:
 * [Route Table](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html) to associate `IGW`, `VPC` and `Subnet`
 * [EC2 Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html) in the public `Subnet` with the HTTP(s) & SSH access
 
-### Required steps
+### Required set-up steps
 
 1. [Install Terraform](https://learn.hashicorp.com/terraform/getting-started/install.html)
 2. Create AWS account
